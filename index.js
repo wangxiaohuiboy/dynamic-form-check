@@ -11,7 +11,7 @@ export default {
     render(h, data) {
         // eslint-disable-next-line no-unused-vars
         const { props, scopedSlots, $slots, parent } = data;
-        const { formProps, itemProps } = props.dynamicFormProps;
+        const { formProps = {}, itemProps = [] } = props.dynamicFormProps || {};
         /**
         * 渲染form组件
         * @param {createElement} h
